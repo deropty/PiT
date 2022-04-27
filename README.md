@@ -23,6 +23,9 @@ $ conda activate PiT
 ### Download pre-trained model
 The pre-trained vit model can be downloaded in this [link](https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_base_p16_224-80ecf9dd.pth) and should be put in the `/home/[USER]/.cache/torch/checkpoints/` directory.
 
+### Dataset Preparation
+For iLIDS-VID, please refer to this [issue](https://github.com/deropty/PiT/issues/2).
+
 ## Training and Testing
 ```
 $ python train.py --config_file configs/MARS/vit_transreid_stride.yml MODEL.DEVICE_ID "('0')" 
