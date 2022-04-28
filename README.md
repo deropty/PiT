@@ -17,7 +17,8 @@ Here is a brief instruction for installing the experimental environment.
 # install virtual envs
 $ conda create -n PiT python=3.6 -y
 $ conda activate PiT
-# install pytorch 1.8.1 and other dependencies
+# install pytorch 1.8.1/1.6.0 (other versions may also work)
+$ pip install timm scipy einops yacs opencv-python tensorboard pandas
 ```
 
 ### Download pre-trained model
@@ -28,7 +29,9 @@ For iLIDS-VID, please refer to this [issue](https://github.com/deropty/PiT/issue
 
 ## Training and Testing
 ```
-$ python train.py --config_file configs/MARS/vit_transreid_stride.yml MODEL.DEVICE_ID "('0')" 
+# This command below includes the training and testing processes.
+$ python train.py --config_file configs/MARS/pit.yml MODEL.DEVICE_ID "('0')" 
+# For testing only, the parameter TEST.WEIGHT in yml file should be the directory of model weights. Otherwise, it should be None.
 ```
 
 
