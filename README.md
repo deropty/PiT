@@ -1,13 +1,10 @@
 # Multi-direction and Multi-scale Pyramid in Transformer for Video-based Pedestrian Retrieval
-![LICENSE](https://img.shields.io/badge/license-GPL%202.0-green) ![Python](https://img.shields.io/badge/python-3.6-blue.svg) ![pytorch](https://img.shields.io/badge/pytorch-1.8.1-orange)
-
+![LICENSE](https://img.shields.io/badge/license-GPL%202.0-green) ![Python](https://img.shields.io/badge/python-3.6-blue.svg) ![pytorch](https://img.shields.io/badge/pytorch-1.8.1-orange) 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-direction-and-multi-scale-pyramid-in-1/person-re-identification-on-ilids-vid)](https://paperswithcode.com/sota/person-re-identification-on-ilids-vid?p=multi-direction-and-multi-scale-pyramid-in-1) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-direction-and-multi-scale-pyramid-in-1/person-re-identification-on-mars)](https://paperswithcode.com/sota/person-re-identification-on-mars?p=multi-direction-and-multi-scale-pyramid-in-1)
 
 Implementation of the proposed PiT. For the preprint version, please refer to [[Arxiv]](https://arxiv.org/pdf/2202.06014.pdf).
 
-The complete code is available on https://git.openi.org.cn/zangxh/PiT.git.
-
-![framework](./framework.jpg)
+![framework](./processor/framework.jpg)
 
 
 ## Getting Started
@@ -36,7 +33,7 @@ $ python train.py --config_file configs/MARS/pit.yml MODEL.DEVICE_ID "('0')"
 
 
 ## Results in the Paper
-The results of MARS and iLIDS-VID are provided.  
+The results of MARS and iLIDS-VID are trained using one 24G NVIDIA GPU and provided below. You can change the parameter `DATALOADER.P` in yml file to decrease the GPU memory cost.
 
 | Model | Rank-1@MARS | Rank-1@iLIDS-VID |
 | --- | --- | --- |
@@ -44,7 +41,7 @@ The results of MARS and iLIDS-VID are provided.
 
 You can download these models and put them in the `../logs/[DATASET]_PiT_1x210_3x70_105x2_6p` directory. Then use the command below to evaluate them.
  ```
-$ python test.py --config_file configs/MARS/vit_transreid_stride.yml MODEL.DEVICE_ID "('0')" 
+$ python test.py --config_file configs/MARS/pit.yml MODEL.DEVICE_ID "('0')" 
 ```
 
 
@@ -70,4 +67,3 @@ If you find this project useful for your research, please kindly cite:
 
 ## License
 This repository is released under the GPL-2.0 License as found in the [LICENSE](LICENSE) file.
-
