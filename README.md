@@ -4,7 +4,7 @@
 
 Implementation of the proposed PiT. For the preprint version, please refer to [[Arxiv]](https://arxiv.org/pdf/2202.06014.pdf).
 
-![framework](./processor/framework.jpg)
+![framework](./framework.jpg)
 
 
 ## Getting Started
@@ -28,7 +28,8 @@ For iLIDS-VID, please refer to this [issue](https://github.com/deropty/PiT/issue
 ```
 # This command below includes the training and testing processes.
 $ python train.py --config_file configs/MARS/pit.yml MODEL.DEVICE_ID "('0')" 
-# For testing only, the parameter TEST.WEIGHT in yml file should be the directory of model weights. Otherwise, it should be None.
+# For testing only
+$ python train.py --config_file configs/MARS/pit-test.yml MODEL.DEVICE_ID "('0')" 
 ```
 
 
@@ -56,11 +57,11 @@ If you find this project useful for your research, please kindly cite:
 @ARTICLE{9714137,
   author={Zang, Xianghao and Li, Ge and Gao, Wei},
   journal={IEEE Transactions on Industrial Informatics}, 
-  title={Multi-direction and Multi-scale Pyramid in Transformer for Video-based Pedestrian Retrieval}, 
+  title={Multidirection and Multiscale Pyramid in Transformer for Video-Based Pedestrian Retrieval}, 
   year={2022},
-  volume={},
-  number={},
-  pages={1-1},
+  volume={18},
+  number={12},
+  pages={8776-8785},
   doi={10.1109/TII.2022.3151766}
 }
 ```
