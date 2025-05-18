@@ -37,8 +37,8 @@ $ python train.py --config_file configs/MARS/pit-test.yml MODEL.DEVICE_ID "('0')
 The results of MARS and iLIDS-VID are trained using one 24G NVIDIA GPU and provided below. You can change the parameter `DATALOADER.P` in yml file to decrease the GPU memory cost.
 
 | Model | Rank-1@MARS | Rank-1@iLIDS-VID |
-| --- | --- | --- |
-| PiT |  [90.22](https://pan.baidu.com/s/1nw5yofEilW0ffG_ZF4eoXQ) (code:wqxv)|  [92.07](https://pan.baidu.com/s/10LosWwUMktTiWvbHEP1Tjw) (code: quci)|
+| --- | --- | --- | --- |
+| PiT |  [90.22](https://pan.baidu.com/s/1nw5yofEilW0ffG_ZF4eoXQ) (code:wqxv)|  [92.07](https://pan.baidu.com/s/10LosWwUMktTiWvbHEP1Tjw) (code: quci)| google drive (https://drive.google.com/drive/folders/1P7xiJ05yVBYz9xQSSuEFbs2FWSrsAhua?usp=sharing)
 
 You can download these models and put them in the `../logs/[DATASET]_PiT_1x210_3x70_105x2_6p` directory. Then use the command below to evaluate them.
  ```
